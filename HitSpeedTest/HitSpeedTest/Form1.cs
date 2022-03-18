@@ -54,12 +54,16 @@ namespace HitSpeedTest
         {
             txtLife.Enabled = true;
             txtHits.Enabled = true;
+            groupBox2.Enabled = true;
+            groupBox1.Enabled = true;
         }
 
         void calc_Started(object sender, EventArgs e)
         {
             txtLife.Enabled = false;
             txtHits.Enabled = false;
+            groupBox2.Enabled = false;
+            groupBox1.Enabled = false;
 
         }
         void loadconfig()
