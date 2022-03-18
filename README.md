@@ -1,6 +1,8 @@
 # HitSpeedTest
 
-Translated to English with DeepL, UI rearranged due to longer text, and updated from .net framework 2.0 to 4.8. 
+Translated to English with DeepL (proofread by me), UI rearranged due to longer text, and updated from .net framework 2.0 to 4.8. 
+
+Downloads: https://github.com/Kuuuube/HitSpeedTest/releases
 
 Translated readme:
 
