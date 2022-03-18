@@ -34,8 +34,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtLife = new System.Windows.Forms.TextBox();
             this.lblLifeTime = new System.Windows.Forms.Label();
             this.lblHits1 = new System.Windows.Forms.Label();
@@ -44,9 +44,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
             this.txtHits = new System.Windows.Forms.TextBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.lblLifeHits = new System.Windows.Forms.Label();
             this.lblHits2 = new System.Windows.Forms.Label();
             this.lblBpm2 = new System.Windows.Forms.Label();
@@ -109,7 +109,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(178, 99);
+            this.label5.Location = new System.Drawing.Point(178, 103);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 13);
             this.label5.TabIndex = 17;
@@ -118,7 +118,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 99);
+            this.label3.Location = new System.Drawing.Point(3, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 13);
             this.label3.TabIndex = 15;
@@ -127,20 +127,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 73);
+            this.label2.Location = new System.Drawing.Point(3, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 14;
             this.label2.Text = "Time remaining:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Test time (seconds):";
             // 
             // radioButton1
             // 
@@ -155,9 +146,18 @@
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.Click += new System.EventHandler(this.radioButton1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Test time (seconds):";
+            // 
             // txtLife
             // 
-            this.txtLife.Location = new System.Drawing.Point(114, 41);
+            this.txtLife.Location = new System.Drawing.Point(111, 41);
             this.txtLife.Name = "txtLife";
             this.txtLife.Size = new System.Drawing.Size(85, 20);
             this.txtLife.TabIndex = 11;
@@ -167,7 +167,7 @@
             // lblLifeTime
             // 
             this.lblLifeTime.AutoSize = true;
-            this.lblLifeTime.Location = new System.Drawing.Point(93, 73);
+            this.lblLifeTime.Location = new System.Drawing.Point(90, 73);
             this.lblLifeTime.Name = "lblLifeTime";
             this.lblLifeTime.Size = new System.Drawing.Size(34, 13);
             this.lblLifeTime.TabIndex = 18;
@@ -176,7 +176,7 @@
             // lblHits1
             // 
             this.lblHits1.AutoSize = true;
-            this.lblHits1.Location = new System.Drawing.Point(101, 99);
+            this.lblHits1.Location = new System.Drawing.Point(100, 103);
             this.lblHits1.Name = "lblHits1";
             this.lblHits1.Size = new System.Drawing.Size(25, 13);
             this.lblHits1.TabIndex = 16;
@@ -185,7 +185,7 @@
             // lblBpm1
             // 
             this.lblBpm1.AutoSize = true;
-            this.lblBpm1.Location = new System.Drawing.Point(260, 99);
+            this.lblBpm1.Location = new System.Drawing.Point(260, 103);
             this.lblBpm1.Name = "lblBpm1";
             this.lblBpm1.Size = new System.Drawing.Size(34, 13);
             this.lblBpm1.TabIndex = 19;
@@ -211,7 +211,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(172, 99);
+            this.label7.Location = new System.Drawing.Point(172, 103);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 13);
             this.label7.TabIndex = 26;
@@ -220,7 +220,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 99);
+            this.label9.Location = new System.Drawing.Point(3, 103);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(89, 13);
             this.label9.TabIndex = 24;
@@ -229,29 +229,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 75);
+            this.label10.Location = new System.Drawing.Point(3, 75);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(134, 13);
+            this.label10.Size = new System.Drawing.Size(137, 13);
             this.label10.TabIndex = 23;
-            this.label10.Text = "Number of remaining times:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 44);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(117, 13);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "Number of tests (times):";
-            // 
-            // txtHits
-            // 
-            this.txtHits.Location = new System.Drawing.Point(129, 41);
-            this.txtHits.Name = "txtHits";
-            this.txtHits.Size = new System.Drawing.Size(85, 20);
-            this.txtHits.TabIndex = 20;
-            this.txtHits.Text = "50";
-            this.txtHits.Leave += new System.EventHandler(this.txtHits_Leave);
+            this.label10.Text = "Number of remaining clicks:";
             // 
             // radioButton2
             // 
@@ -260,9 +242,27 @@
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(116, 17);
             this.radioButton2.TabIndex = 29;
-            this.radioButton2.Text = "Quantitative testing";
+            this.radioButton2.Text = "Click count testing";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.Click += new System.EventHandler(this.radioButton2_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 44);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(89, 13);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Number of clicks:";
+            // 
+            // txtHits
+            // 
+            this.txtHits.Location = new System.Drawing.Point(98, 41);
+            this.txtHits.Name = "txtHits";
+            this.txtHits.Size = new System.Drawing.Size(85, 20);
+            this.txtHits.TabIndex = 20;
+            this.txtHits.Text = "50";
+            this.txtHits.Leave += new System.EventHandler(this.txtHits_Leave);
             // 
             // lblLifeHits
             // 
@@ -276,7 +276,7 @@
             // lblHits2
             // 
             this.lblHits2.AutoSize = true;
-            this.lblHits2.Location = new System.Drawing.Point(101, 99);
+            this.lblHits2.Location = new System.Drawing.Point(101, 103);
             this.lblHits2.Name = "lblHits2";
             this.lblHits2.Size = new System.Drawing.Size(25, 13);
             this.lblHits2.TabIndex = 25;
@@ -285,7 +285,7 @@
             // lblBpm2
             // 
             this.lblBpm2.AutoSize = true;
-            this.lblBpm2.Location = new System.Drawing.Point(254, 99);
+            this.lblBpm2.Location = new System.Drawing.Point(254, 103);
             this.lblBpm2.Name = "lblBpm2";
             this.lblBpm2.Size = new System.Drawing.Size(34, 13);
             this.lblBpm2.TabIndex = 28;
