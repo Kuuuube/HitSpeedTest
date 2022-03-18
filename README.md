@@ -1,18 +1,17 @@
-HitSpeedTest
-============
-使用方法：
-设定测试值，每次测试前点击重置按钮或按回车即可
+# HitSpeedTest
 
-两种测试方式
-1、定时测试：设定一个测试时间，在时间内统计击打次数
-2、定量测试：设定一个测试击打数，在统计击打数完成的时间
+Translated to English with DeepL, UI rearranged due to longer text, and updated from .net framework 2.0 to 4.8. 
 
-按键设定：
-K1、K2、M1、M2分别对应键盘key1 key2默认为z,x，M1、M2对应鼠标左右键勾上对应的复选框并设定键值即可（鼠标左键LButton、右键RButton、中键MButton）
+Translated readme:
 
-特性：
-1、支持双刀
-2、有冲突判定（即K1保持按下状态时M1按下不计次数，与osu保持一致）
-3、曲线图和数据显示（绿线是总体平均bpm，设定时间长一点可以看长连稳定速度，蓝线为最近5次点击的平均bpm，一定程度上可以体现稳定度）
-4、单戳模式将2分拍计算对应的4分拍bpm，即只勾选一个按键时bpm*2（如单戳实际100bpm对应的图为200bpm）
-GitHub:github.com/ShallI/HitSpeedTest/
+<br>
+
+How to use: Set the test value, click the reset button or press enter before each test
+
+Two types of test 1, timing test: set a test time, the number of hits counted within the time 2, quantitative test: set a test number of hits, the number of hits completed in the statistics time
+
+Key settings: K1, K2, M1, M2, respectively, corresponding to the keyboard key1 key2 default z, x, M1, M2 corresponding to the left and right mouse keys check the corresponding checkbox and set the key value can be (left mouse key LButton, right key RButton, middle key MButton)
+
+Features: 1, support double knife 2, there is a conflict judgment (that is, K1 keep pressed state M1 pressed without counting the number of times, consistent with osu) 3, graphs and data display (green line is the overall average bpm, set a longer time can be seen in the long company stable speed, the blue line is the average bpm of the last 5 clicks, to a certain extent, can reflect the stability) 4, single poke mode will be 2 minutes beat calculation corresponding to the 4 bpm, that is, when only one key is checked bpm * 2 (such as the actual 100bpm single poke corresponding to the graph of 200bpm) GitHub:github.com/ShallI/HitSpeedTest/
+
+Translated with www.DeepL.com/Translator (free version)
