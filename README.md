@@ -1,6 +1,6 @@
 # HitSpeedTest
 
-Translated to English with DeepL (proofread by me), UI rearranged due to longer text, and updated from .net framework 2.0 to 4.8. 
+Translated to English with DeepL (proofread and fixed by me), UI rearranged due to longer text, and updated from .net framework 2.0 to 4.8. 
 
 Downloads: https://github.com/Kuuuube/HitSpeedTest/releases
 
@@ -8,12 +8,30 @@ Translated readme:
 
 <br>
 
-How to use: Set the test value, click the reset button or press enter before each test
+Usage: Set the test value, then, click the reset button or press enter before each test.
 
-Two types of test 1, timing test: set a test time, the number of hits counted within the time 2, quantitative test: set a test number of hits, the number of hits completed in the statistics time
+There are two types of tests:
 
-Key settings: K1, K2, M1, M2, respectively, corresponding to the keyboard key1 key2 default z, x, M1, M2 corresponding to the left and right mouse keys check the corresponding checkbox and set the key value can be (left mouse key LButton, right key RButton, middle key MButton)
+1. Timed testing: Set a time, the number of hits is counted within the set time.
 
-Features: 1, support double knife 2, there is a conflict judgment (that is, K1 keep pressed state M1 pressed without counting the number of times, consistent with osu) 3, graphs and data display (green line is the overall average bpm, set a longer time can be seen in the long company stable speed, the blue line is the average bpm of the last 5 clicks, to a certain extent, can reflect the stability) 4, single poke mode will be 2 minutes beat calculation corresponding to the 4 bpm, that is, when only one key is checked bpm * 2 (such as the actual 100bpm single poke corresponding to the graph of 200bpm) GitHub:github.com/ShallI/HitSpeedTest/
+2. Click count testing: Set a number of clicks, the time taken to complete the number of clicks is counted.
 
-Translated with www.DeepL.com/Translator (free version)
+Key settings: K1, K2, M1, M2
+
+Use the dropdown menus to change the keybinds.
+
+Features: 
+
+1. Support double knife*
+2. There is a conflict judgment (K1 cannot be pressed at the same time as M1 and the same for K2 and M2. This is consistent with how it is handled in osu!) 
+3. Graphs and data display 
+
+	The green line is the overall average bpm.
+
+	The blue line is the average bpm of the last 5 clicks.
+
+4. When only a single key is enabled it will be read at double the BPM. This means it will reflect 1/2 timing (typical jumps) instead of 1/4 timing (typical streams) so you can test your singletap speed.
+
+<br>
+
+##### *(PN: I have no clue what this is supposed to mean so I will leave it how deepl translated it.)
