@@ -22,7 +22,7 @@ Use the dropdown menus to change the keybinds.
 
 Features: 
 
-1. Support double knife*
+1. Supports double tapping
 2. There is a conflict judgment (K1 cannot be pressed at the same time as M1 and the same for K2 and M2. This is consistent with how it is handled in osu!) 
 3. Graphs and data display 
 
@@ -31,7 +31,3 @@ Features:
 	The blue line is the average bpm of the last 5 clicks.
 
 4. When only a single key is enabled it will be read at double the BPM. This means it will reflect 1/2 timing (typical jumps) instead of 1/4 timing (typical streams) so you can test your singletap speed.
-
-<br>
-
-##### *(PN: I have no clue what this is supposed to mean so I will leave it how deepl translated it.)
