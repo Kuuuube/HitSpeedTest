@@ -121,7 +121,7 @@ namespace HitSpeedTest
                     a = b;
                     c = d;
                     b = new Point((int)(calc.Hits * bitmap.Width / calc.TargetHits), bitmap.Height - (int)(bpm * bitmap.Height / picStatus.Height));
-                    d = new Point((int)(calc.Hits * bitmap.Width / calc.TargetHits), (bitmap.Height - (int)(calc.PartBPM(5) * bitmap.Height / picStatus.Height)));
+                    d = new Point((int)(calc.Hits * bitmap.Width / calc.TargetHits), bitmap.Height - (int)(calc.PartBPM(5) * bitmap.Height / picStatus.Height));
                     if (a != Point.Empty && b != Point.Empty) g.DrawLine(Pens.Green, a, b);
                     if (c != Point.Empty && d != Point.Empty) g.DrawLine(Pens.Blue, c, d);
                     picStatus.Refresh();

@@ -72,7 +72,7 @@
             this.picStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picStatus.Location = new System.Drawing.Point(12, 206);
             this.picStatus.Name = "picStatus";
-            this.picStatus.Size = new System.Drawing.Size(600, 260);
+            this.picStatus.Size = new System.Drawing.Size(600, 398);
             this.picStatus.TabIndex = 3;
             this.picStatus.TabStop = false;
             this.picStatus.Paint += new System.Windows.Forms.PaintEventHandler(this.picStatus_Paint);
@@ -240,7 +240,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(6, 10);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(116, 17);
+            this.radioButton2.Size = new System.Drawing.Size(112, 17);
             this.radioButton2.TabIndex = 29;
             this.radioButton2.Text = "Click count testing";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -409,7 +409,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 479);
+            this.ClientSize = new System.Drawing.Size(624, 616);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.picStatus);
