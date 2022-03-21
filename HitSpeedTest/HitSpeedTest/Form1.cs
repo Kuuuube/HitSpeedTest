@@ -66,18 +66,22 @@ namespace HitSpeedTest
         {
             txtLife.Enabled = true;
             txtHits.Enabled = true;
+            groupBox3.Enabled = true;
             groupBox2.Enabled = true;
             groupBox1.Enabled = true;
             displayBPM.Enabled = true;
+            label4.Enabled = true; //displayBPM label
         }
 
         void calc_Started(object sender, EventArgs e)
         {
             txtLife.Enabled = false;
             txtHits.Enabled = false;
+            groupBox3.Enabled = false;
             groupBox2.Enabled = false;
             groupBox1.Enabled = false;
             displayBPM.Enabled = false;
+            label4.Enabled = false; //displayBPM label
 
         }
         void loadconfig()

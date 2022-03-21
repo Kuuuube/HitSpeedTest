@@ -73,6 +73,7 @@
             this.BPM3 = new System.Windows.Forms.Label();
             this.BPM2 = new System.Windows.Forms.Label();
             this.BPM1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picStatus)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -83,7 +84,7 @@
             // picStatus
             // 
             this.picStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picStatus.Location = new System.Drawing.Point(35, 206);
+            this.picStatus.Location = new System.Drawing.Point(35, 231);
             this.picStatus.Name = "picStatus";
             this.picStatus.Size = new System.Drawing.Size(577, 299);
             this.picStatus.TabIndex = 3;
@@ -356,7 +357,7 @@
             // 
             this.chkK2.Checked = true;
             this.chkK2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkK2.Location = new System.Drawing.Point(129, 3);
+            this.chkK2.Location = new System.Drawing.Point(128, 3);
             this.chkK2.Name = "chkK2";
             this.chkK2.Size = new System.Drawing.Size(44, 22);
             this.chkK2.TabIndex = 7;
@@ -368,7 +369,7 @@
             // 
             this.cmbK2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbK2.FormattingEnabled = true;
-            this.cmbK2.Location = new System.Drawing.Point(179, 3);
+            this.cmbK2.Location = new System.Drawing.Point(178, 3);
             this.cmbK2.Name = "cmbK2";
             this.cmbK2.Size = new System.Drawing.Size(69, 21);
             this.cmbK2.TabIndex = 10;
@@ -378,7 +379,7 @@
             // 
             this.chkM1.Checked = true;
             this.chkM1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkM1.Location = new System.Drawing.Point(255, 3);
+            this.chkM1.Location = new System.Drawing.Point(253, 3);
             this.chkM1.Name = "chkM1";
             this.chkM1.Size = new System.Drawing.Size(44, 22);
             this.chkM1.TabIndex = 6;
@@ -390,7 +391,7 @@
             // 
             this.cmbM1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbM1.FormattingEnabled = true;
-            this.cmbM1.Location = new System.Drawing.Point(305, 3);
+            this.cmbM1.Location = new System.Drawing.Point(303, 3);
             this.cmbM1.Name = "cmbM1";
             this.cmbM1.Size = new System.Drawing.Size(69, 21);
             this.cmbM1.TabIndex = 11;
@@ -400,7 +401,7 @@
             // 
             this.chkM2.Checked = true;
             this.chkM2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkM2.Location = new System.Drawing.Point(381, 3);
+            this.chkM2.Location = new System.Drawing.Point(378, 3);
             this.chkM2.Name = "chkM2";
             this.chkM2.Size = new System.Drawing.Size(44, 22);
             this.chkM2.TabIndex = 5;
@@ -420,7 +421,7 @@
             // 
             // displayBPM
             // 
-            this.displayBPM.Location = new System.Drawing.Point(527, 511);
+            this.displayBPM.Location = new System.Drawing.Point(441, 206);
             this.displayBPM.Name = "displayBPM";
             this.displayBPM.Size = new System.Drawing.Size(85, 20);
             this.displayBPM.TabIndex = 30;
@@ -430,7 +431,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(418, 514);
+            this.label4.Location = new System.Drawing.Point(332, 209);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 13);
             this.label4.TabIndex = 30;
@@ -439,7 +440,7 @@
             // BPM0
             // 
             this.BPM0.AutoSize = true;
-            this.BPM0.Location = new System.Drawing.Point(4, 498);
+            this.BPM0.Location = new System.Drawing.Point(4, 523);
             this.BPM0.Name = "BPM0";
             this.BPM0.Size = new System.Drawing.Size(13, 13);
             this.BPM0.TabIndex = 21;
@@ -448,7 +449,7 @@
             // BPM10
             // 
             this.BPM10.AutoSize = true;
-            this.BPM10.Location = new System.Drawing.Point(4, 200);
+            this.BPM10.Location = new System.Drawing.Point(4, 225);
             this.BPM10.Name = "BPM10";
             this.BPM10.Size = new System.Drawing.Size(25, 13);
             this.BPM10.TabIndex = 31;
@@ -457,7 +458,7 @@
             // BPM9
             // 
             this.BPM9.AutoSize = true;
-            this.BPM9.Location = new System.Drawing.Point(4, 231);
+            this.BPM9.Location = new System.Drawing.Point(4, 256);
             this.BPM9.Name = "BPM9";
             this.BPM9.Size = new System.Drawing.Size(25, 13);
             this.BPM9.TabIndex = 33;
@@ -466,7 +467,7 @@
             // BPM8
             // 
             this.BPM8.AutoSize = true;
-            this.BPM8.Location = new System.Drawing.Point(4, 260);
+            this.BPM8.Location = new System.Drawing.Point(4, 285);
             this.BPM8.Name = "BPM8";
             this.BPM8.Size = new System.Drawing.Size(25, 13);
             this.BPM8.TabIndex = 34;
@@ -475,7 +476,7 @@
             // BPM7
             // 
             this.BPM7.AutoSize = true;
-            this.BPM7.Location = new System.Drawing.Point(4, 290);
+            this.BPM7.Location = new System.Drawing.Point(4, 315);
             this.BPM7.Name = "BPM7";
             this.BPM7.Size = new System.Drawing.Size(25, 13);
             this.BPM7.TabIndex = 35;
@@ -484,7 +485,7 @@
             // BPM6
             // 
             this.BPM6.AutoSize = true;
-            this.BPM6.Location = new System.Drawing.Point(4, 320);
+            this.BPM6.Location = new System.Drawing.Point(4, 345);
             this.BPM6.Name = "BPM6";
             this.BPM6.Size = new System.Drawing.Size(25, 13);
             this.BPM6.TabIndex = 36;
@@ -493,7 +494,7 @@
             // BPM5
             // 
             this.BPM5.AutoSize = true;
-            this.BPM5.Location = new System.Drawing.Point(4, 350);
+            this.BPM5.Location = new System.Drawing.Point(4, 375);
             this.BPM5.Name = "BPM5";
             this.BPM5.Size = new System.Drawing.Size(25, 13);
             this.BPM5.TabIndex = 37;
@@ -502,7 +503,7 @@
             // BPM4
             // 
             this.BPM4.AutoSize = true;
-            this.BPM4.Location = new System.Drawing.Point(4, 380);
+            this.BPM4.Location = new System.Drawing.Point(4, 405);
             this.BPM4.Name = "BPM4";
             this.BPM4.Size = new System.Drawing.Size(25, 13);
             this.BPM4.TabIndex = 38;
@@ -511,7 +512,7 @@
             // BPM3
             // 
             this.BPM3.AutoSize = true;
-            this.BPM3.Location = new System.Drawing.Point(4, 410);
+            this.BPM3.Location = new System.Drawing.Point(4, 435);
             this.BPM3.Name = "BPM3";
             this.BPM3.Size = new System.Drawing.Size(19, 13);
             this.BPM3.TabIndex = 39;
@@ -520,7 +521,7 @@
             // BPM2
             // 
             this.BPM2.AutoSize = true;
-            this.BPM2.Location = new System.Drawing.Point(4, 440);
+            this.BPM2.Location = new System.Drawing.Point(4, 465);
             this.BPM2.Name = "BPM2";
             this.BPM2.Size = new System.Drawing.Size(19, 13);
             this.BPM2.TabIndex = 40;
@@ -529,17 +530,27 @@
             // BPM1
             // 
             this.BPM1.AutoSize = true;
-            this.BPM1.Location = new System.Drawing.Point(4, 470);
+            this.BPM1.Location = new System.Drawing.Point(4, 495);
             this.BPM1.Name = "BPM1";
             this.BPM1.Size = new System.Drawing.Size(19, 13);
             this.BPM1.TabIndex = 41;
             this.BPM1.Text = "30";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(1, 206);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 13);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "BPM";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 542);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.BPM1);
             this.Controls.Add(this.BPM2);
             this.Controls.Add(this.BPM3);
@@ -627,6 +638,7 @@
         private System.Windows.Forms.Label BPM3;
         private System.Windows.Forms.Label BPM2;
         private System.Windows.Forms.Label BPM1;
+        private System.Windows.Forms.Label label6;
     }
 }
 
