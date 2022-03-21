@@ -108,7 +108,6 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtLife);
             this.groupBox1.Controls.Add(this.lblLifeTime);
@@ -151,7 +150,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 10);
+            this.radioButton1.Location = new System.Drawing.Point(18, 25);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(88, 17);
             this.radioButton1.TabIndex = 20;
@@ -210,7 +209,6 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.txtHits);
             this.groupBox2.Controls.Add(this.lblLifeHits);
@@ -252,7 +250,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 10);
+            this.radioButton2.Location = new System.Drawing.Point(324, 25);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(112, 17);
             this.radioButton2.TabIndex = 29;
@@ -567,8 +565,10 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.picStatus);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.groupBox1);
             this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "HitSpeedTest";

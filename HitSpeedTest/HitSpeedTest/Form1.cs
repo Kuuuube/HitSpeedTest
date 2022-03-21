@@ -165,7 +165,7 @@ namespace HitSpeedTest
         {
             radioButton2.Checked = false;
             groupBox1.Enabled = true;
-            groupBox2.Enabled = true;
+            groupBox2.Enabled = false;
             calc.Method = CalcMethod.ByTime;
             lblL = lblLifeTime;
             lblH = lblHits1;
@@ -177,7 +177,7 @@ namespace HitSpeedTest
         {
             radioButton1.Checked = false;
             groupBox2.Enabled = true;
-            groupBox1.Enabled = true;
+            groupBox1.Enabled = false;
             calc.Method = CalcMethod.ByHits;
             lblL = lblLifeHits;
             lblH = lblHits2;
