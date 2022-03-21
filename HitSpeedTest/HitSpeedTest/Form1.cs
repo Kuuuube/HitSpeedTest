@@ -68,6 +68,7 @@ namespace HitSpeedTest
             txtHits.Enabled = true;
             groupBox2.Enabled = true;
             groupBox1.Enabled = true;
+            displayBPM.Enabled = true;
         }
 
         void calc_Started(object sender, EventArgs e)
@@ -76,6 +77,7 @@ namespace HitSpeedTest
             txtHits.Enabled = false;
             groupBox2.Enabled = false;
             groupBox1.Enabled = false;
+            displayBPM.Enabled = false;
 
         }
         void loadconfig()
