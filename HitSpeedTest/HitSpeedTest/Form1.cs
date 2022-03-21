@@ -20,6 +20,18 @@ namespace HitSpeedTest
         Graphics g;
         Point a, b;
         Point c, d;
+        Point bpmlineright0, bpmlineleft0;
+        Point bpmlineright1, bpmlineleft1;
+        Point bpmlineright2, bpmlineleft2;
+        Point bpmlineright3, bpmlineleft3;
+        Point bpmlineright4, bpmlineleft4;
+        Point bpmlineright5, bpmlineleft5;
+        Point bpmlineright6, bpmlineleft6;
+        Point bpmlineright7, bpmlineleft7;
+        Point bpmlineright8, bpmlineleft8;
+        Point bpmlineright9, bpmlineleft9;
+        Point bpmlineright10, bpmlineleft10;
+        float scalefactor = 400;
         public Form1()
         {
             InitializeComponent();
@@ -97,12 +109,13 @@ namespace HitSpeedTest
 
                 double bpm = calc.BPM;
                 lblB.Text = bpm.ToString("#0.0");//current average bpm
+
                 if (calc.IsRunning)
                 {
                     a = b;
                     c = d;
-                    b = new Point((int)((calc.TargetTime - calc.LeftTime) * bitmap.Width / calc.TargetTime), (bitmap.Height-(int)(bpm*bitmap.Height/picStatus.Height)));
-                    d = new Point((int)((calc.TargetTime - calc.LeftTime) * bitmap.Width / calc.TargetTime),(bitmap.Height-(int)(calc.PartBPM(5)*bitmap.Height/picStatus.Height)));
+                    b = new Point((int)((calc.TargetTime - calc.LeftTime) * bitmap.Width / calc.TargetTime), (int)(bitmap.Height - (int)(bpm * bitmap.Height / picStatus.Height) / (scalefactor / 300)));
+                    d = new Point((int)((calc.TargetTime - calc.LeftTime) * bitmap.Width / calc.TargetTime), (int)(bitmap.Height - (int)(calc.PartBPM(5) * bitmap.Height / picStatus.Height) / (scalefactor / 300)));
                     if (a != Point.Empty && b != Point.Empty) g.DrawLine(Pens.Green, a, b);
                     if (c != Point.Empty && d != Point.Empty) g.DrawLine(Pens.Blue, c, d);
                     picStatus.Refresh();
@@ -120,8 +133,8 @@ namespace HitSpeedTest
                 {
                     a = b;
                     c = d;
-                    b = new Point((int)(calc.Hits * bitmap.Width / calc.TargetHits), bitmap.Height - (int)(bpm * bitmap.Height / picStatus.Height));
-                    d = new Point((int)(calc.Hits * bitmap.Width / calc.TargetHits), bitmap.Height - (int)(calc.PartBPM(5) * bitmap.Height / picStatus.Height));
+                    b = new Point((int)(calc.Hits * bitmap.Width / calc.TargetHits), (int)(bitmap.Height - (int)(bpm * bitmap.Height / picStatus.Height) / (scalefactor / 300)));
+                    d = new Point((int)(calc.Hits * bitmap.Width / calc.TargetHits), (int)(bitmap.Height - (int)(calc.PartBPM(5) * bitmap.Height / picStatus.Height) / (scalefactor / 300)));
                     if (a != Point.Empty && b != Point.Empty) g.DrawLine(Pens.Green, a, b);
                     if (c != Point.Empty && d != Point.Empty) g.DrawLine(Pens.Blue, c, d);
                     picStatus.Refresh();
@@ -137,6 +150,8 @@ namespace HitSpeedTest
             b = Point.Empty;
             c = Point.Empty;
             d = Point.Empty;
+            drawmainlines();
+            drawminorlines();
         }
 
         //for time test
@@ -197,6 +212,22 @@ namespace HitSpeedTest
             else
             {
                 txtHits.Undo();
+            }
+        }
+
+        private void displayBPM_Leave(object sender, EventArgs e)
+        {
+            int bpm_scale;
+            if (int.TryParse(displayBPM.Text, out bpm_scale))
+            {
+                scalefactor = (int)bpm_scale;
+                drawmainlines();
+                drawminorlines();
+                writebpmlegends();
+            }
+            else
+            {
+                displayBPM.Undo();
             }
         }
 
@@ -338,9 +369,94 @@ namespace HitSpeedTest
         {
             if (calc.IsRunning) e.Handled = true;
         }
-
-
-
-
+        public void drawmainlines()
+        {
+            //render 11 bpm lines from top to bottom
+            //line 0 is at the very top and not normally visible
+            bpmlineleft0 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * bitmap.Height / picStatus.Height) / (scalefactor / 300)) * 1));
+            bpmlineright0 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * bitmap.Height / picStatus.Height) / (scalefactor / 300)) * 1));
+            g.DrawLine(Pens.DarkGray, bpmlineleft0, bpmlineright0);
+            bpmlineleft1 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.9 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright1 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.9 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.DarkGray, bpmlineleft1, bpmlineright1);
+            bpmlineleft2 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.8 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright2 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.8 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.DarkGray, bpmlineleft2, bpmlineright2);
+            bpmlineleft3 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.7 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright3 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.7 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.DarkGray, bpmlineleft3, bpmlineright3);
+            bpmlineleft4 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.6 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright4 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.6 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.DarkGray, bpmlineleft4, bpmlineright4);
+            bpmlineleft5 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.5 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright5 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.5 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.DarkGray, bpmlineleft5, bpmlineright5);
+            bpmlineleft6 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.4 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright6 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.4 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.DarkGray, bpmlineleft6, bpmlineright6);
+            bpmlineleft7 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.3 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright7 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.3 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.DarkGray, bpmlineleft7, bpmlineright7);
+            bpmlineleft8 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.2 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright8 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.2 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.DarkGray, bpmlineleft8, bpmlineright8);
+            bpmlineleft9 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.1 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright9 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.1 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.DarkGray, bpmlineleft9, bpmlineright9);
+            //line 10 is at the very bottom and not normally visible
+            bpmlineleft10 = new Point(0, (int)bitmap.Height);
+            bpmlineright10 = new Point((int)bitmap.Width, (int)bitmap.Height);
+            g.DrawLine(Pens.DarkGray, bpmlineleft10, bpmlineright10);
+            picStatus.Refresh();
+        }
+        public void drawminorlines()
+        {
+            //render 10 lighter bpm lines from top to bottom
+            bpmlineleft0 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.95 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright0 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.95 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.LightGray, bpmlineleft0, bpmlineright0);
+            bpmlineleft1 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.85 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright1 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.85 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.LightGray, bpmlineleft1, bpmlineright1);
+            bpmlineleft2 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.75 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright2 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.75 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.LightGray, bpmlineleft2, bpmlineright2);
+            bpmlineleft3 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.65 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright3 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.65 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.LightGray, bpmlineleft3, bpmlineright3);
+            bpmlineleft4 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.55 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright4 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.55 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.LightGray, bpmlineleft4, bpmlineright4);
+            bpmlineleft5 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.45 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright5 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.45 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.LightGray, bpmlineleft5, bpmlineright5);
+            bpmlineleft6 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.35 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright6 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.35 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.LightGray, bpmlineleft6, bpmlineright6);
+            bpmlineleft7 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.25 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright7 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.25 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.LightGray, bpmlineleft7, bpmlineright7);
+            bpmlineleft8 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.15 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright8 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.15 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.LightGray, bpmlineleft8, bpmlineright8);
+            bpmlineleft9 = new Point(0, (int)((bitmap.Height - (int)(scalefactor * 0.05 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            bpmlineright9 = new Point((int)bitmap.Width, (int)((bitmap.Height - (int)(scalefactor * 0.05 * bitmap.Height / picStatus.Height) / (scalefactor / 300))));
+            g.DrawLine(Pens.LightGray, bpmlineleft9, bpmlineright9);
+            picStatus.Refresh();
+        }
+        public void writebpmlegends()
+        {
+            BPM0.Text = ((int)(scalefactor * 0)).ToString();
+            BPM1.Text = ((int)(scalefactor * 0.1)).ToString();
+            BPM2.Text = ((int)(scalefactor * 0.2)).ToString();
+            BPM3.Text = ((int)(scalefactor * 0.3)).ToString();
+            BPM4.Text = ((int)(scalefactor * 0.4)).ToString();
+            BPM5.Text = ((int)(scalefactor * 0.5)).ToString();
+            BPM6.Text = ((int)(scalefactor * 0.6)).ToString();
+            BPM7.Text = ((int)(scalefactor * 0.7)).ToString();
+            BPM8.Text = ((int)(scalefactor * 0.8)).ToString();
+            BPM9.Text = ((int)(scalefactor * 0.9)).ToString();
+            BPM10.Text = ((int)(scalefactor * 1)).ToString();
+        }
     }
 }
