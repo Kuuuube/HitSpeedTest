@@ -94,7 +94,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(526, 150);
+            this.btnReset.Location = new System.Drawing.Point(532, 150);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(80, 50);
             this.btnReset.TabIndex = 11;
@@ -309,7 +309,7 @@
             this.groupBox3.Controls.Add(this.flowLayoutPanel1);
             this.groupBox3.Location = new System.Drawing.Point(12, 150);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(508, 50);
+            this.groupBox3.Size = new System.Drawing.Size(514, 50);
             this.groupBox3.TabIndex = 30;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Key settings";
@@ -325,9 +325,9 @@
             this.flowLayoutPanel1.Controls.Add(this.chkM2);
             this.flowLayoutPanel1.Controls.Add(this.cmbM2);
             this.flowLayoutPanel1.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 16);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 17);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(499, 27);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(502, 27);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // chkK1
@@ -336,9 +336,9 @@
             this.chkK1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkK1.Location = new System.Drawing.Point(3, 3);
             this.chkK1.Name = "chkK1";
-            this.chkK1.Size = new System.Drawing.Size(36, 22);
+            this.chkK1.Size = new System.Drawing.Size(44, 22);
             this.chkK1.TabIndex = 8;
-            this.chkK1.Text = "K1";
+            this.chkK1.Text = "K1:";
             this.chkK1.UseVisualStyleBackColor = true;
             this.chkK1.CheckedChanged += new System.EventHandler(this.settingsChanged);
             // 
@@ -346,9 +346,9 @@
             // 
             this.cmbK1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbK1.FormattingEnabled = true;
-            this.cmbK1.Location = new System.Drawing.Point(45, 3);
+            this.cmbK1.Location = new System.Drawing.Point(53, 3);
             this.cmbK1.Name = "cmbK1";
-            this.cmbK1.Size = new System.Drawing.Size(70, 21);
+            this.cmbK1.Size = new System.Drawing.Size(69, 21);
             this.cmbK1.TabIndex = 9;
             this.cmbK1.SelectionChangeCommitted += new System.EventHandler(this.settingsChanged);
             // 
@@ -356,11 +356,11 @@
             // 
             this.chkK2.Checked = true;
             this.chkK2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkK2.Location = new System.Drawing.Point(121, 3);
+            this.chkK2.Location = new System.Drawing.Point(129, 3);
             this.chkK2.Name = "chkK2";
-            this.chkK2.Size = new System.Drawing.Size(36, 22);
+            this.chkK2.Size = new System.Drawing.Size(44, 22);
             this.chkK2.TabIndex = 7;
-            this.chkK2.Text = "K2";
+            this.chkK2.Text = "K2:";
             this.chkK2.UseVisualStyleBackColor = true;
             this.chkK2.CheckedChanged += new System.EventHandler(this.settingsChanged);
             // 
@@ -368,9 +368,9 @@
             // 
             this.cmbK2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbK2.FormattingEnabled = true;
-            this.cmbK2.Location = new System.Drawing.Point(163, 3);
+            this.cmbK2.Location = new System.Drawing.Point(179, 3);
             this.cmbK2.Name = "cmbK2";
-            this.cmbK2.Size = new System.Drawing.Size(70, 21);
+            this.cmbK2.Size = new System.Drawing.Size(69, 21);
             this.cmbK2.TabIndex = 10;
             this.cmbK2.SelectionChangeCommitted += new System.EventHandler(this.settingsChanged);
             // 
@@ -378,11 +378,11 @@
             // 
             this.chkM1.Checked = true;
             this.chkM1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkM1.Location = new System.Drawing.Point(239, 3);
+            this.chkM1.Location = new System.Drawing.Point(255, 3);
             this.chkM1.Name = "chkM1";
-            this.chkM1.Size = new System.Drawing.Size(36, 22);
+            this.chkM1.Size = new System.Drawing.Size(44, 22);
             this.chkM1.TabIndex = 6;
-            this.chkM1.Text = "M1";
+            this.chkM1.Text = "M1:";
             this.chkM1.UseVisualStyleBackColor = true;
             this.chkM1.CheckedChanged += new System.EventHandler(this.settingsChanged);
             // 
@@ -390,9 +390,9 @@
             // 
             this.cmbM1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbM1.FormattingEnabled = true;
-            this.cmbM1.Location = new System.Drawing.Point(281, 3);
+            this.cmbM1.Location = new System.Drawing.Point(305, 3);
             this.cmbM1.Name = "cmbM1";
-            this.cmbM1.Size = new System.Drawing.Size(70, 21);
+            this.cmbM1.Size = new System.Drawing.Size(69, 21);
             this.cmbM1.TabIndex = 11;
             this.cmbM1.SelectionChangeCommitted += new System.EventHandler(this.settingsChanged);
             // 
@@ -400,11 +400,11 @@
             // 
             this.chkM2.Checked = true;
             this.chkM2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkM2.Location = new System.Drawing.Point(357, 3);
+            this.chkM2.Location = new System.Drawing.Point(381, 3);
             this.chkM2.Name = "chkM2";
-            this.chkM2.Size = new System.Drawing.Size(36, 22);
+            this.chkM2.Size = new System.Drawing.Size(44, 22);
             this.chkM2.TabIndex = 5;
-            this.chkM2.Text = "M2";
+            this.chkM2.Text = "M2:";
             this.chkM2.UseVisualStyleBackColor = true;
             this.chkM2.CheckedChanged += new System.EventHandler(this.settingsChanged);
             // 
@@ -412,9 +412,9 @@
             // 
             this.cmbM2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbM2.FormattingEnabled = true;
-            this.cmbM2.Location = new System.Drawing.Point(399, 3);
+            this.cmbM2.Location = new System.Drawing.Point(428, 3);
             this.cmbM2.Name = "cmbM2";
-            this.cmbM2.Size = new System.Drawing.Size(70, 21);
+            this.cmbM2.Size = new System.Drawing.Size(69, 21);
             this.cmbM2.TabIndex = 12;
             this.cmbM2.SelectionChangeCommitted += new System.EventHandler(this.settingsChanged);
             // 
