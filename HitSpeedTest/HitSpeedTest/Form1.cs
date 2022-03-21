@@ -31,7 +31,7 @@ namespace HitSpeedTest
         Point bpmlineright8, bpmlineleft8;
         Point bpmlineright9, bpmlineleft9;
         Point bpmlineright10, bpmlineleft10;
-        float scalefactor = 400;
+        float scalefactor = 300;
         public Form1()
         {
             InitializeComponent();
