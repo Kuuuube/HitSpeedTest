@@ -64,17 +64,27 @@ namespace HitSpeedTest
         //输入控制
         void calc_Stopped(object sender, EventArgs e)
         {
-            txtLife.Enabled = true;
-            txtHits.Enabled = true;
+            if (radioButton1.Checked == true)
+            {
+                groupBox1.Enabled = true;
+                txtLife.Enabled = true;
+            }
+            if (radioButton2.Checked == true)
+            {
+                txtHits.Enabled = true;
+                groupBox2.Enabled = true;
+            }
+            radioButton1.Enabled = true;
+            radioButton2.Enabled = true;
             groupBox3.Enabled = true;
-            groupBox2.Enabled = true;
-            groupBox1.Enabled = true;
             displayBPM.Enabled = true;
             label4.Enabled = true; //displayBPM label
         }
 
         void calc_Started(object sender, EventArgs e)
         {
+            radioButton1.Enabled = false;
+            radioButton2.Enabled = false;
             txtLife.Enabled = false;
             txtHits.Enabled = false;
             groupBox3.Enabled = false;
@@ -101,8 +111,8 @@ namespace HitSpeedTest
             cmbM2.Text = Enum.GetName(typeof(Keys), settings.M2);
             cmbM2.Enabled = settings.M2On;
 
-            chkK1.Checked =settings.K1On;
-            chkK2.Checked =settings.K2On;
+            chkK1.Checked = settings.K1On;
+            chkK2.Checked = settings.K2On;
             chkM1.Checked = settings.M1On;
             chkM2.Checked = settings.M2On;
         }
