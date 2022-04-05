@@ -131,13 +131,10 @@ namespace HitSpeedTest
                 {
                     line1_left = line1_right;
                     line2_left = line2_right;
-                    line3_left = line3_right;
                     line1_right = new Point((int)((calc.TargetTime - calc.LeftTime) * bitmap.Width / calc.TargetTime), (int)(bitmap.Height - (int)(bpm * bitmap.Height / picStatus.Height) / (scalefactor / 300)));
                     line2_right = new Point((int)((calc.TargetTime - calc.LeftTime) * bitmap.Width / calc.TargetTime), (int)(bitmap.Height - (int)(calc.PartBPM(5) * bitmap.Height / picStatus.Height) / (scalefactor / 300)));
-                    line3_right = new Point((int)((calc.TargetTime - calc.LeftTime) * bitmap.Width / calc.TargetTime), (int)(bitmap.Height - (int)(calc.PartBPM(500000) * bitmap.Height / picStatus.Height) / (scalefactor / 300)));
                     if (line1_left != Point.Empty && line1_right != Point.Empty) g.DrawLine(Pens.Green, line1_left, line1_right);
                     if (line2_left != Point.Empty && line2_right != Point.Empty) g.DrawLine(Pens.Blue, line2_left, line2_right);
-                    if (line3_left != Point.Empty && line3_right != Point.Empty) g.DrawLine(Pens.Red, line3_left, line3_right);
                     picStatus.Refresh();
                 }
             }
@@ -153,13 +150,10 @@ namespace HitSpeedTest
                 {
                     line1_left = line1_right;
                     line2_left = line2_right;
-                    line3_left = line3_right;
                     line1_right = new Point((int)(calc.Hits * bitmap.Width / calc.TargetHits), (int)(bitmap.Height - (int)(bpm * bitmap.Height / picStatus.Height) / (scalefactor / 300)));
                     line2_right = new Point((int)(calc.Hits * bitmap.Width / calc.TargetHits), (int)(bitmap.Height - (int)(calc.PartBPM(5) * bitmap.Height / picStatus.Height) / (scalefactor / 300)));
-                    line3_right = new Point((int)(calc.Hits * bitmap.Width / calc.TargetHits), (int)(bitmap.Height - (int)(calc.PartBPM(500000) * bitmap.Height / picStatus.Height) / (scalefactor / 300)));
                     if (line1_left != Point.Empty && line1_right != Point.Empty) g.DrawLine(Pens.Green, line1_left, line1_right);
                     if (line2_left != Point.Empty && line2_right != Point.Empty) g.DrawLine(Pens.Blue, line2_left, line2_right);
-                    if (line3_left != Point.Empty && line3_right != Point.Empty) g.DrawLine(Pens.Red, line3_left, line3_right);
                     picStatus.Refresh();
                 }
             }
@@ -185,6 +179,7 @@ namespace HitSpeedTest
             radioButton2.Checked = false;
             groupBox1.Enabled = true;
             groupBox2.Enabled = false;
+            txtLife.Enabled = true;
             calc.Method = CalcMethod.ByTime;
             lblL = lblLifeTime;
             lblH = lblHits1;
@@ -197,6 +192,7 @@ namespace HitSpeedTest
             radioButton1.Checked = false;
             groupBox2.Enabled = true;
             groupBox1.Enabled = false;
+            txtHits.Enabled = true;
             calc.Method = CalcMethod.ByHits;
             lblL = lblLifeHits;
             lblH = lblHits2;
